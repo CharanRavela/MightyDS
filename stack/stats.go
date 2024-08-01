@@ -1,6 +1,8 @@
 package stack
 
 type StackStats struct {
+	// TODO: Need to add stats for other operations of this package
+
 	tOps  int // total operations performed pop + push + peek + clear includes failed attempts
 	tPops int // total pop operations performed includes failed attempts
 
