@@ -1,0 +1,155 @@
+[settings]
+severity = "warning"  # Default severity for issues
+ignore = ["vendor", "generated"]  # Ignore vendor and generated files
+
+# Set max line length for readability
+[rule.line-length-limit]
+limit = 80  # 80 characters per line
+
+# Cognitive complexity, the maximum allowed score for functions
+[rule.cognitive-complexity]
+max = 15  # Function complexity should not exceed 15
+
+# Limit the number of arguments a function can accept to ensure clarity
+[rule.argument-limit]
+max = 5  # Limit function arguments to 5
+
+# Ensure proper spacing after comments for better readability
+[rule.comment-spacings]
+enabled = true  # Ensure space after "//"
+
+# Ensure adequate comment density for better code readability
+[rule.comments-density]
+min = 20  # Require at least 20% of the lines to be comments
+
+# Detect confusing variable names
+[rule.confusing-naming]
+enabled = true  # Enforce clear and descriptive variable names
+
+# Detect confusing results, e.g., functions returning unexpected or ambiguous results
+[rule.confusing-results]
+enabled = true  # Flag confusing results in functions
+
+# Flag logical expressions in constants (e.g., `true == true`)
+[rule.constant-logical-expr]
+enabled = true  # Flag logical expressions within constants
+
+# Cyclomatic complexity, limiting function decision complexity
+[rule.cyclomatic]
+max = 10  # Cyclomatic complexity should not exceed 10
+
+# Detect excessive use of exit statements that might make the code harder to understand
+[rule.deep-exit]
+enabled = true  # Flag deep exit scenarios (multiple return statements in a function)
+
+# Flag dot imports (importing with `.`), which can obscure the code
+[rule.dot-imports]
+enabled = true  # Disallow dot imports
+
+# Detect duplicate imports to avoid redundant code
+[rule.duplicated-imports]
+enabled = true  # Flag duplicate imports
+
+# Encourage early return patterns for better readability
+[rule.early-return]
+enabled = true  # Encourage early returns instead of deep nesting
+
+# Detect empty blocks (e.g., `{}`) that serve no purpose
+[rule.empty-block]
+enabled = true  # Flag empty code blocks
+
+# Flag unnecessary empty lines that reduce code readability
+[rule.empty-lines]
+min = 1  # Minimum of 1 empty line between code blocks for readability
+
+# Detect error variable naming that doesn’t follow common conventions
+[rule.error-naming]
+enabled = true  # Ensure errors are named appropriately (usually `err`)
+
+# Detect functions that return errors but do not handle them
+[rule.error-return]
+enabled = true  # Flag functions that return errors without handling them
+
+# Detect string errors not following the usual `Error()` format
+[rule.error-strings]
+enabled = true  # Enforce error strings to follow the `Error()` format
+
+# Ensure `fmt.Errorf` is used for error formatting
+[rule.errorf]
+enabled = true  # Ensure usage of `fmt.Errorf`
+
+# Require exported functions and variables to have appropriate documentation
+[rule.exported]
+enabled = true  # Flag unexported entities missing documentation
+
+# Ensure filenames follow conventions (e.g., lowercase with hyphens)
+[rule.filename-format]
+enabled = true  # Ensure proper filename format
+
+# Flag functions that have flag parameters
+[rule.flag-parameter]
+enabled = true  # Flag functions that take `flag` parameters
+
+# Detect identical branches in control flow that could be simplified
+[rule.identical-branches]
+enabled = true  # Flag identical branches
+
+# Flag functions with return statements inside if blocks for better readability
+[rule.if-return]
+enabled = true  # Encourage return inside `if` blocks
+
+# Flag import aliasing when the alias is not descriptive
+[rule.import-alias-naming]
+enabled = true  # Flag imports with unclear aliases
+
+# Detect shadowing of imports which can lead to confusion
+[rule.import-shadowing]
+enabled = true  # Flag shadowed imports
+
+# Limit maximum function result length for better readability
+[rule.function-result-limit]
+max = 2  # Max 2 results per function
+
+# Enforce proper time comparisons in the code
+[rule.time-equal]
+enabled = true  # Flag invalid time comparisons
+
+# Ensure time variables and functions follow proper naming conventions
+[rule.time-naming]
+enabled = true  # Ensure consistent naming for time-related variables
+
+# Detect recursion without an exit condition that could lead to infinite loops
+[rule.unconditional-recursion]
+enabled = true  # Flag unconditional recursion
+
+# Detect unhandled errors, especially when they should be propagated
+[rule.unhandled-error]
+enabled = true  # Flag unhandled errors
+
+# Detect unnecessary statements like redundant assignments or no-ops
+[rule.unnecessary-stmt]
+enabled = true  # Flag unnecessary statements
+
+# Flag unreachable code, such as code after return statements
+[rule.unreachable-code]
+enabled = true  # Flag unreachable code blocks
+
+# Flag unused parameters in functions
+[rule.unused-parameter]
+enabled = true  # Flag unused function parameters
+
+# Flag unused receivers in methods
+[rule.unused-receiver]
+enabled = true  # Flag unused method receivers
+
+# Avoid usage of `interface{}` in favor of more concrete types
+[rule.use-any]
+enabled = true  # Flag the use of `interface{}`
+
+# Ensure proper variable declaration and naming conventions
+[rule.var-declaration]
+enabled = true  # Flag improper variable declarations
+
+# Enforce proper variable naming conventions
+[rule.var-naming]
+pattern = "^[a-z][a-z0-9]*$"  # Use snake_case for variable naming
