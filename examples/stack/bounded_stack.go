@@ -3,7 +3,7 @@ package main
 import (
 	"fmt"
 
-	mds "github.com/CharanRavela/MightyDS/stack"
+	mds "github.com/CharanRavela/mighty-ds/stack"
 )
 
 func bounded_stack() {
